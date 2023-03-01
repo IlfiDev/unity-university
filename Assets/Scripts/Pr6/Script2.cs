@@ -5,7 +5,6 @@ using UnityEngine;
 public class Script2 : MonoBehaviour
 {
     [SerializeField] private GameObject _object;
-    private bool _isInTrigger = false;
     private Renderer _renderer;
 
     private void Start(){

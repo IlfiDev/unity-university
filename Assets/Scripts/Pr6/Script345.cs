@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Script34 : MonoBehaviour
+public class Script345 : MonoBehaviour
 {
     private Renderer _renderer;
     private Vector3 _mouseOffset;
@@ -26,6 +26,9 @@ public class Script34 : MonoBehaviour
         _mouseZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
 
         _mouseOffset = gameObject.transform.position - getMousePosition();
+
+        Debug.Log(transform.position);
+        Debug.Log(_renderer.material.color);
     }
 
     private Vector3 getMousePosition(){
@@ -39,4 +42,5 @@ public class Script34 : MonoBehaviour
     private void OnMouseDrag(){
         transform.position = getMousePosition() + _mouseOffset;
     }
+
 }
